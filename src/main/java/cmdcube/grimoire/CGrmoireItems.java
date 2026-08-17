@@ -45,13 +45,13 @@ public class CGrmoireItems {
 
                 // The tab builder also accepts Blocks
                 output.accept(ModBlocks.CONDENSED_OAK_LOG);
-                output.accept(ModBlocks.PRISMARINE_LAMP);*/
+                output.accept(ModBlocks.PRISMARINE_LAMP);
 
                 // And custom ItemStacks
                 ItemStack stack = new ItemStack(Items.SEA_PICKLE);
                 stack.set(DataComponents.ITEM_NAME, Component.literal("Pickle Rick"));
                 stack.set(DataComponents.LORE, new ItemLore(List.of(Component.literal("I'm pickle riiick!!"))));
-                output.accept(stack);
+                output.accept(stack);*/
             })
             .build();
 
