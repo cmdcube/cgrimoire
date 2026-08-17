@@ -1,12 +1,20 @@
 package cmdcube.grimoire;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.ItemLore;
 
+import java.util.List;
 import java.util.function.Function;
 
 public class CGrmoireItems {
@@ -24,6 +32,28 @@ public class CGrmoireItems {
 
             return item;
     }
+
+    public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
+            BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(CGrimoire.MOD_ID, "creative_tab")
+    );
+    public static final CreativeModeTab CUSTOM_CREATIVE_TAB = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(CGrmoireItems.GRIMOIRE))
+            .title(Component.translatable("itemGroup.example-mod"))
+            .displayItems((params, output) -> {
+                output.accept(CGrmoireItems.GRIMOIRE);
+                /*output.accept(ModItems.POISONOUS_APPLE);
+
+                // The tab builder also accepts Blocks
+                output.accept(ModBlocks.CONDENSED_OAK_LOG);
+                output.accept(ModBlocks.PRISMARINE_LAMP);*/
+
+                // And custom ItemStacks
+                ItemStack stack = new ItemStack(Items.SEA_PICKLE);
+                stack.set(DataComponents.ITEM_NAME, Component.literal("Pickle Rick"));
+                stack.set(DataComponents.LORE, new ItemLore(List.of(Component.literal("I'm pickle riiick!!"))));
+                output.accept(stack);
+            })
+            .build();
 
     public static void init() {}
 }
