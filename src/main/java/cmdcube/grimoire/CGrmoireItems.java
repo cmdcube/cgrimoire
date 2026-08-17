@@ -55,5 +55,10 @@ public class CGrmoireItems {
             })
             .build();
 
-    public static void init() {}
+    public static void init() {
+
+        // Register the group.
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_CREATIVE_TAB_KEY, CUSTOM_CREATIVE_TAB);
+
+    }
 }
