@@ -19,6 +19,7 @@ public class CGrimoire implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("ItsLanker is a dumbass!");
 		LOGGER.info("[CGrimoire] loaded successfully!");
+        LOGGER.info("1234");
 	}
 
 	public static Identifier id(String path) {
