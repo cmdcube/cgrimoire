@@ -10,8 +10,9 @@ import net.minecraft.world.item.Item;
 import java.util.function.Function;
 
 public class CGrmoireItems {
-    public class ModItems {
-        public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
+    public static final Item GRIMOIRE = register("grimoire", Item::new, new Item.Properties());
+
+    public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
             // Create the item key.
             ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(CGrimoire.MOD_ID, name));
 
@@ -22,7 +23,7 @@ public class CGrmoireItems {
             Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
             return item;
-        }
-
     }
+
+    public static void init() {}
 }
