@@ -1,0 +1,11 @@
+{
+  "type": "cgrimoire:dim_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "minecraft:amplified",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "minecraft:soul_sand_valley"
+    }
+  }
+}
