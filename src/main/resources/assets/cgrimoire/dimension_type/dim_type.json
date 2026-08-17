@@ -1,0 +1,26 @@
+{
+  "ambient_light": 0.1,
+  "attributes": {
+    "minecraft:gameplay/bed_rule": {
+      "can_sleep": "never",
+      "can_set_spawn": "never",
+      "explodes": false
+    },
+    "minecraft:gameplay/fast_lava": true,
+    "minecraft:gameplay/sky_light_level": 4,
+    "minecraft:visual/fog_color": 14810880
+  },
+  "cardinal_light": "nether",
+  "coordinate_scale": 7,
+  "has_ceiling": true,
+  "has_fixed_time": true,
+  "has_skylight": false,
+  "height": 256,
+  "infiniburn": "#minecraft:infiniburn_nether",
+  "logical_height": 128,
+  "min_y": 0,
+  "monster_spawn_block_light_limit": 15,
+  "monster_spawn_light_level": 7,
+  "skybox": "none",
+  "timelines": "#minecraft:in_nether"
+}
