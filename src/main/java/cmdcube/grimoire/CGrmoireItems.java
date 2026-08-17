@@ -38,20 +38,9 @@ public class CGrmoireItems {
     );
     public static final CreativeModeTab CUSTOM_CREATIVE_TAB = FabricItemGroup.builder()
             .icon(() -> new ItemStack(CGrmoireItems.GRIMOIRE))
-            .title(Component.translatable("itemGroup.example-mod"))
+            .title(Component.translatable("itemGroup.cgrimoire"))
             .displayItems((params, output) -> {
                 output.accept(CGrmoireItems.GRIMOIRE);
-                /*output.accept(ModItems.POISONOUS_APPLE);
-
-                // The tab builder also accepts Blocks
-                output.accept(ModBlocks.CONDENSED_OAK_LOG);
-                output.accept(ModBlocks.PRISMARINE_LAMP);
-
-                // And custom ItemStacks
-                ItemStack stack = new ItemStack(Items.SEA_PICKLE);
-                stack.set(DataComponents.ITEM_NAME, Component.literal("Pickle Rick"));
-                stack.set(DataComponents.LORE, new ItemLore(List.of(Component.literal("I'm pickle riiick!!"))));
-                output.accept(stack);*/
             })
             .build();
 
