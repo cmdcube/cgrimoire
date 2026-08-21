@@ -14,7 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import java.util.function.Function;
 
 public class CGrmoireItems {
-    public static final Item GRIMOIRE = register("grimoire", Item::new, new Item.Properties().stacksTo(1));
+    public static final Item GRIMOIRE = register("grimoire", Item::new, new Item.Properties().stacksTo(1).fireResistant());
     public static final Item ASH_DUST = register("ash_dust", Item::new, new Item.Properties());
     public static final Item CINERIFER = register("cinerifer", Item::new, new Item.Properties().stacksTo(1));
     public static final Item TORTURAM_ELIMINANS = register("torturam_eliminans", Item::new, new Item.Properties().stacksTo(1));
