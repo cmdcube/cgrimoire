@@ -1,5 +1,10 @@
 {
   "itemGroup.cgrimoire": "Grimoire",
 
-  "item.cgrimoire.grimoire": "Grimoire"
+  "item.cgrimoire.grimoire": "Grimoire",
+  "item.cgrimoire.ash_dust": "Ash Dust",
+  "item.cgrimoire.cinerifer": "Cinerifer",
+  "item.cgrimoire.torturam_eliminans": "Torturam Eliminans",
+
+  "block.cgrimoire.ash": "Ash"
 }

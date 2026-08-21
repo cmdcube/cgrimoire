@@ -15,6 +15,9 @@ import java.util.function.Function;
 
 public class CGrmoireItems {
     public static final Item GRIMOIRE = register("grimoire", Item::new, new Item.Properties().stacksTo(1));
+    public static final Item ASH_DUST = register("ash_dust", Item::new, new Item.Properties());
+    public static final Item CINERIFER = register("cinerifer", Item::new, new Item.Properties().stacksTo(1));
+    public static final Item TORTURAM_ELIMINANS = register("torturam_eliminans", Item::new, new Item.Properties().stacksTo(1));
 
     public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
             // Create the item key.
@@ -37,6 +40,10 @@ public class CGrmoireItems {
             .title(Component.translatable("itemGroup.cgrimoire"))
             .displayItems((params, output) -> {
                 output.accept(CGrmoireItems.GRIMOIRE);
+                output.accept(CGrmoireItems.ASH_DUST);
+                output.accept(CGrimoireBlocks.ASH);
+                output.accept(CGrmoireItems.CINERIFER);
+                output.accept(CGrmoireItems.TORTURAM_ELIMINANS);
             })
             .build();
 

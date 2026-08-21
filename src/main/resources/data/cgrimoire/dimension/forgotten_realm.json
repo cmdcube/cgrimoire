@@ -1,11 +1,11 @@
 {
-  "type": "cgrimoire:dim_type",
+  "type": "cgrimoire:ash_desert",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:amplified",
+    "settings": "cgrimoire:ash_desert",
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "minecraft:soul_sand_valley"
+      "biome": "cgrimoire:ash_desert"
     }
   }
 }

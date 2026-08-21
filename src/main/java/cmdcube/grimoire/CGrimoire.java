@@ -14,6 +14,7 @@ public class CGrimoire implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		CGrmoireItems.init();
+		CGrimoireBlocks.init();
 		LOGGER.info("ItsLanker is a goon!");
 		LOGGER.info("[CGrimoire] loaded successfully!");
 	}
