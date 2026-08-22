@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "cgrimoire:item/torturam_eliminans"
+  }
+}
